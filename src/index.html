@@ -7,17 +7,11 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
+    
+    <main>  
+        <div id="header"></div>
+        <main>
+            <!-- ...existing code... -->
         <section id="about">
             <h2>About Me</h2>
             <p>This is a brief introduction about myself.</p>
@@ -34,6 +28,14 @@
     <footer>
         <p>&copy; 2023 My Portfolio</p>
     </footer>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
     <script src="assets/js/scripts.js"></script>
+    </body>
 </body>
 </html>
